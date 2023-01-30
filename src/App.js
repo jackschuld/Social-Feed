@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import Post from './Components/Post/Post';
 import PostList from './Components/PostList/PostList';
+import CreatePostForm from './Components/CreatePostForm/CreatePostForm';
+import NavBar from './Components/NavBar/NavBar';
 
 function App() {
 
@@ -8,7 +9,15 @@ function App() {
   
   return (
     <div>
-      <PostList parentEntries={entries, Post}/>
+      <div>
+        <NavBar />
+      </div>
+      <div>
+        <CreatePostForm />
+      </div>
+      <div>
+        <PostList parentEntries={entries}/>
+      </div>
     </div>
   );
 }

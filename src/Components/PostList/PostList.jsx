@@ -1,18 +1,27 @@
 import React, { useState } from 'react';
-import Post from './Components/Post/Post';
-
 
 const PostList = (props) => {
     return ( 
-        <div>
+        <table>
+            <tbody>
             {props.parentEntries.map((entry) => {
                 return (
-                    <div>
-                        <Post parentEntry={entry}/>
-                    </div>
+                <div>
+                    <tr>
+                        <td>{entry.name}</td>
+                    </tr>
+                    <tr>
+                        <td>{entry.post}</td>
+                    </tr>
+                    <tr>
+                        <button>Like</button>
+                        <button>Dislike</button>
+                    </tr>
+                </div>
                 );
             })}
-        </div>
+            </tbody>
+        </table>
      );
 }
  
