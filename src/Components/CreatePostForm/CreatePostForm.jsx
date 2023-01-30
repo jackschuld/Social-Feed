@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 
 
-const CreatePostForm = (posts) => {
+const CreatePostForm = (props) => {
 
     const [name, setName] = useState('');
     const [post, setPost] = useState('');
 
     function handleSubmit(e) {
         e.preventDefault();
-        let newEntry = {
+        let newPost = {
             name: name,
             post: post
         };
-        console.log(newEntry);
+        props.addNewPostProperty(newPost);
     }
 
     return ( 

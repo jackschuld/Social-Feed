@@ -5,19 +5,20 @@ import NavBar from './Components/NavBar/NavBar';
 
 function App() {
 
-  const [entries, setEntries] = useState([{name: 'stoutishgoat583', post: 'RIP Crosby'}, {name: 'Pardog', post: 'Woof!'}])
+  const [posts, setPosts] = useState([{name: 'stoutishgoat583', post: 'RIP Crosby'}, {name: 'Pardog', post: 'Woof!'}])
   
+  function addNewPost(post) {
+    let tempPosts = [...posts, post];
+
+    setPosts(tempPosts);
+  }
+
+
   return (
     <div>
-      <div>
-        <NavBar />
-      </div>
-      <div>
-        <CreatePostForm />
-      </div>
-      <div>
-        <PostList parentEntries={entries}/>
-      </div>
+      <NavBar />
+      <CreatePostForm addNewPostProperty={addNewPost}/>
+      <PostList parentEntries={posts}/>
     </div>
   );
 }
