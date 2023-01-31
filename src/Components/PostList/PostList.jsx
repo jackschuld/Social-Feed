@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Post from '../Post/Post';
 
 const PostList = (props) => {
     return ( 
@@ -6,18 +7,7 @@ const PostList = (props) => {
             <tbody>
             {props.parentEntries.map((entry) => {
                 return (
-                <div>
-                    <tr>
-                        <td>{entry.name}</td>
-                    </tr>
-                    <tr>
-                        <td>{entry.post}</td>
-                    </tr>
-                    <tr>
-                        <button>Like</button>
-                        <button>Dislike</button>
-                    </tr>
-                </div>
+                    <Post entryPost = {entry}/>
                 );
             })}
             </tbody>
