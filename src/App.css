@@ -1,0 +1,77 @@
+.container-fluid {
+    background-color: #E2F2EE;
+}
+
+nav, .new-post, .post-list {
+    background-color: #FFF;
+}
+
+nav {
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+}
+
+.new-post > form, .post-entry {
+    padding: 1em;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.new-post, .post-list {
+    width: 50%;
+    margin: 10px 33%;
+    border-radius: 5px;
+    border: 2px;
+    border-style: solid;
+    border-color: #999;
+    box-shadow: 5px 5px 0 0 #BDCBC7;
+}
+
+.post-entry {
+    border-bottom: 2px solid #999;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+}
+
+
+button {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #FFF;
+    height: 50px;
+    border: none;
+}
+
+.create-button, .buttons {
+    justify-content: right;
+    display: flex;
+}
+
+.like > button, .dislike > button {
+    width: 50px;
+}
+
+.like > .inactive {
+    background-image: url(../Thumbs\ Up\ Green.png);
+}
+
+.dislike > .inactive {
+    background-image: url(../Thumbs\ Down\ Grey.png);
+}
+
+.like > .active {
+    background-image: url(../Thumbs\ Up\ Green1.png);
+}
+
+.dislike > .active {
+    background-image: url(../Thumbs\ Down\ Red.png);
+}
