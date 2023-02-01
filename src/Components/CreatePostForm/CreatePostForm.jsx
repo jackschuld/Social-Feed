@@ -6,6 +6,7 @@ const CreatePostForm = (props) => {
     const [name, setName] = useState('');
     const [post, setPost] = useState('');
 
+
     function handleSubmit(e) {
         e.preventDefault();
         let newPost = {

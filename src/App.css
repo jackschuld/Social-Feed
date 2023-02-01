@@ -35,6 +35,10 @@ nav {
     border-bottom: 2px solid #999;
 }
 
+.name {
+    font-weight: 600;
+}
+
 .body {
     display: flex;
     flex-direction: column;

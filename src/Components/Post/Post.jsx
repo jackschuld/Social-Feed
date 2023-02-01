@@ -5,6 +5,7 @@ const Post = (props) => {
 
     const [likeButtonClass, setLikeClass] = useState('inactive');
     const [dislikeButtonClass, setDislikeClass] = useState('inactive')
+    
 
     function handleLikeClick() {
         if(likeButtonClass==='inactive'){
@@ -34,7 +35,7 @@ const Post = (props) => {
     return (
         <div className='post-entry'>
             <div>
-                <span>{props.entryPost.name}</span>
+                <span className='name'>{props.entryPost.name}</span>
             </div>
             <div>
                 <span>{props.entryPost.post}</span>
